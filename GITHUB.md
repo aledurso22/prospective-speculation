@@ -15,6 +15,16 @@ gh repo create prospective-speculation --public --source=. --remote=origin --pus
 
 GitHub CLI must be authenticated to the intended account (`gh auth status`). This command creates a new public repository. If that name already exists, inspect the existing repository and connect its remote deliberately instead of overwriting it.
 
+If you downloaded and unpacked the ZIP instead of using the prepared local repository, initialize Git before the create command:
+
+```bash
+git init -b main
+git add .
+git commit -m "Prepare GPU experiment for cluster"
+```
+
+Git needs your commit name and email configured. Use your GitHub-provided noreply email if you prefer to keep your personal email private.
+
 Public visibility permits unauthenticated HTTPS cloning. It is optional: use `--private` if preferred, then authenticate the cluster through your site's supported GitHub method before cloning. Never put access tokens in a clone URL or tracked file.
 
 The supplied `.gitignore` excludes the virtual environment, caches, new benchmark runs, intermediate checkpoints, and common local credential files. The committed `results/` files are required baseline assets; do not exclude that directory. The existing NPZ files are small and do not require Git LFS.
