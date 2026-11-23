@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+runs/
+smoke_results/
+cpu_rerun/
+prospective-*.out
+prospective-*.err
+.DS_Store
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+results/checkpoint.json

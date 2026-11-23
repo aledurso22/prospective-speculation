@@ -1,0 +1,29 @@
+test_adaptive_exact_solution_matches_independent_ode_integrator (test_adapters.AdapterTests.test_adaptive_exact_solution_matches_independent_ode_integrator) ... ok
+test_equal_and_nearly_equal_time_constants_use_finite_correct_limit (test_adapters.AdapterTests.test_equal_and_nearly_equal_time_constants_use_finite_correct_limit) ... ok
+test_finite_response_to_smooth_and_abrupt_inputs (test_adapters.AdapterTests.test_finite_response_to_smooth_and_abrupt_inputs) ... ok
+test_held_input_solution_is_independent_of_interval_partition (test_adapters.AdapterTests.test_held_input_solution_is_independent_of_interval_partition) ... ok
+test_ideal_inverse_equals_instantaneous_on_arbitrary_inputs (test_adapters.AdapterTests.test_ideal_inverse_equals_instantaneous_on_arbitrary_inputs) ... ok
+test_initialization_is_equilibrated_and_constant_input_stays_constant (test_adapters.AdapterTests.test_initialization_is_equilibrated_and_constant_input_stays_constant) ... ok
+test_invalid_inputs_fail_before_changing_state (test_adapters.AdapterTests.test_invalid_inputs_fail_before_changing_state) ... ok
+test_rollback_matches_fresh_replay_without_aliases (test_adapters.AdapterTests.test_rollback_matches_fresh_replay_without_aliases) ... ok
+test_snapshot_rejects_other_adapter_or_configuration (test_adapters.AdapterTests.test_snapshot_rejects_other_adapter_or_configuration) ... ok
+test_zero_prospective_gain_recovers_leaky_dynamics (test_adapters.AdapterTests.test_zero_prospective_gain_recovers_leaky_dynamics) ... ok
+test_batch_probabilities_match_single_causal_prefixes (test_decoding.DecodingTests.test_batch_probabilities_match_single_causal_prefixes) ... ok
+test_empty_generation_and_invalid_arguments (test_decoding.DecodingTests.test_empty_generation_and_invalid_arguments) ... ok
+test_equal_distributions_accept_every_proposal_and_clock_bonus (test_decoding.DecodingTests.test_equal_distributions_accept_every_proposal_and_clock_bonus) ... ok
+test_every_real_adapter_matches_committed_prefix_replay (test_decoding.DecodingTests.test_every_real_adapter_matches_committed_prefix_replay) ... ok
+test_full_joint_enumeration_of_two_token_round (test_decoding.DecodingTests.test_full_joint_enumeration_of_two_token_round) ... ok
+test_one_step_exactness_including_zero_draft_support (test_decoding.DecodingTests.test_one_step_exactness_including_zero_draft_support) ... ok
+test_partial_acceptance_then_rejection_restores_correct_prefix (test_decoding.DecodingTests.test_partial_acceptance_then_rejection_restores_correct_prefix) ... ok
+test_real_sampler_marginals_for_conditional_target (test_decoding.DecodingTests.test_real_sampler_marginals_for_conditional_target) ... ok
+test_rejected_states_match_replay_of_committed_prefix (test_decoding.DecodingTests.test_rejected_states_match_replay_of_committed_prefix) ... ok
+test_target_batch_contains_only_proposed_prefixes (test_decoding.DecodingTests.test_target_batch_contains_only_proposed_prefixes) ... ok
+test_zero_block_matches_target_sampler_and_updates_adapter (test_decoding.DecodingTests.test_zero_block_matches_target_sampler_and_updates_adapter) ... ok
+test_analytic_gradients_match_central_finite_differences (test_models.ModelTests.test_analytic_gradients_match_central_finite_differences) ... ok
+test_calibration_and_batched_target_preserve_the_same_mapping (test_models.ModelTests.test_calibration_and_batched_target_preserve_the_same_mapping) ... ok
+test_distillation_reduces_held_out_error_and_checkpoint_round_trips (test_models.ModelTests.test_distillation_reduces_held_out_error_and_checkpoint_round_trips) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.674s
+
+OK

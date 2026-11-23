@@ -1,0 +1,176 @@
+{
+  "schema": "prospective_speculation.model_assets",
+  "version": 1,
+  "created_with": {
+    "numpy": "2.5.5",
+    "python": "3.14.4",
+    "platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O"
+  },
+  "source_results": {
+    "path": "results.json",
+    "sha256": "6c5fadc02fe4937ae4277bb8dbc71f0e18ce76aa127e2d72967bee8818232978"
+  },
+  "model_source_sha256": "73ab8bf6d84b3f6939388491acefca25c4794c9e64b86afb96e66d4e8baff276",
+  "seeds": [
+    17,
+    23,
+    41
+  ],
+  "regeneration": "NeuralTarget(seed,width), then calibrate(saved teacher_logit_scale); no retraining",
+  "validation_policy": "Exact target weight hashes plus CPU reference probes required; GPU execution not implied",
+  "models": {
+    "17": {
+      "schema": "prospective_speculation.model_assets",
+      "version": 1,
+      "model_seed": 17,
+      "width": 2048,
+      "logit_scale": 3.8922377716154437,
+      "draft": {
+        "path": "draft_seed_17.npz",
+        "sha256": "044da40c232a1bdb2be094daacfc8f5e87f9f3d8f559bd230bcfdc7b2e8ae2ef"
+      },
+      "weights": [
+        {
+          "dtype": "<f4",
+          "shape": [
+            24,
+            2048
+          ],
+          "sha256": "b78b8ad7837cdd8049de6a56e1ec430982743299180ba87b3d25928514278eae"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            2048
+          ],
+          "sha256": "d04c18cf2a92adb236e4e3b4ee1108dde42f63df8327d68e5f448b91157a185f"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            16
+          ],
+          "sha256": "2f2ae48efb3d857b5e0136a280e19d1dc5bd957354565417b9dd51737e59797e"
+        }
+      ],
+      "embeddings": {
+        "dtype": "<f8",
+        "shape": [
+          16,
+          16
+        ],
+        "sha256": "9ea8081385170427aa78101c6860508c576812482dd43b689b065c380a00dd2e"
+      },
+      "probes": {
+        "path": "target_probes_seed_17.npz",
+        "sha256": "435c371208ed757303b9dffbc044627959e6b905551cff8e6a5ce5f110d548df",
+        "positions": 64
+      },
+      "fingerprint_sha256": "0427f0e647fbe85dbfe4911360f5f89b093e3105e2486d01d9cba869641e0cc1"
+    },
+    "23": {
+      "schema": "prospective_speculation.model_assets",
+      "version": 1,
+      "model_seed": 23,
+      "width": 2048,
+      "logit_scale": 3.7207853924552188,
+      "draft": {
+        "path": "draft_seed_23.npz",
+        "sha256": "6756d7874c4d55b198f91617e71e5215adff2ebd24c1f26c9fb801ee27cff183"
+      },
+      "weights": [
+        {
+          "dtype": "<f4",
+          "shape": [
+            24,
+            2048
+          ],
+          "sha256": "03db0681f9baa1778c7acd9001d88fb8c085a123f8d26d38fd96481a00045426"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            2048
+          ],
+          "sha256": "ac2c411ba5f90b8328116ae22193e08a13881c0ff45bfaaaf606c3ea5a30d060"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            16
+          ],
+          "sha256": "2f3538815d2acdcc409c4c4e68a0960512422e603d542bb7380a3088e524f7f6"
+        }
+      ],
+      "embeddings": {
+        "dtype": "<f8",
+        "shape": [
+          16,
+          16
+        ],
+        "sha256": "9d1d4664bb182fae0d821ee58aac303e9db245d409b00fcd24272d2e8afb6743"
+      },
+      "probes": {
+        "path": "target_probes_seed_23.npz",
+        "sha256": "d52de66b798f39200d1d62655585bcf6bde597e23ec8e4f3a5aeebb5b2a178c7",
+        "positions": 64
+      },
+      "fingerprint_sha256": "0e487736683b74cae698f161993ab4ebf834a8cf3377a197b227acdfb53f2284"
+    },
+    "41": {
+      "schema": "prospective_speculation.model_assets",
+      "version": 1,
+      "model_seed": 41,
+      "width": 2048,
+      "logit_scale": 3.884253676920446,
+      "draft": {
+        "path": "draft_seed_41.npz",
+        "sha256": "7b8e08fcf4d1e0aff18b1f52d00356f0be1bd4daa8646b62fd76b8964f8b2e83"
+      },
+      "weights": [
+        {
+          "dtype": "<f4",
+          "shape": [
+            24,
+            2048
+          ],
+          "sha256": "df73b0f63f2281d67df4a01f7fd8532b375ee6bb9c2717949458bd68eed8b8b3"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            2048
+          ],
+          "sha256": "1fdde618fb20aaae585afec63966f047addc57104a8f575fc6efb2e15af7eaef"
+        },
+        {
+          "dtype": "<f4",
+          "shape": [
+            2048,
+            16
+          ],
+          "sha256": "c110ab602837a460a82e58d3eb0b9deb6d17064b764a53cb915e2652ebe55b06"
+        }
+      ],
+      "embeddings": {
+        "dtype": "<f8",
+        "shape": [
+          16,
+          16
+        ],
+        "sha256": "10b1b036078bbfd10a7967a40350fd40284e98d894672151721b3483ee9f36d0"
+      },
+      "probes": {
+        "path": "target_probes_seed_41.npz",
+        "sha256": "857ec767c027860e06ef94d42e1579c9ac07c52bee4c54c8ff1359d43c0c03b8",
+        "positions": 64
+      },
+      "fingerprint_sha256": "4fabd80f47f7f78a85e5c87a6f92dc8d5f04b50c7e51abe6fe57c5bf717af61c"
+    }
+  }
+}

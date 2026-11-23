@@ -1,0 +1,658 @@
+{
+  "schema": "prospective_speculation.evidence_audit",
+  "version": 1,
+  "source": {
+    "path": "results.json",
+    "sha256": "6c5fadc02fe4937ae4277bb8dbc71f0e18ce76aa127e2d72967bee8818232978",
+    "numpy_version": "2.5.5",
+    "audit_code_sha256": "181f2578d13ef8e5e0bec72ed568d30ecca3cab53528c1692bf08fbfc4378812",
+    "adapters_code_sha256": "4e8a0903a6e3531d8343766eebb90b313c2c63e2dd2016bd76face28d2847835"
+  },
+  "correctness_controls_status": "PASS",
+  "discovery_status": "NOT_ESTABLISHED",
+  "finding": "Prospective fidelity is worse in every paired context in these saved results.",
+  "scope": "No GPU measurement, retraining, hyperparameter tuning, or significance test is performed by this audit.",
+  "paired_saved_evidence": {
+    "comparison_tolerance": 1e-12,
+    "direction": "Positive TV delta means prospective is worse; negative means better.",
+    "acceptance_identity": "For a single proposal at a fixed prefix, E[accept]=sum_x min(p_x,q_x)=1-TV(p,q).",
+    "replication": "Context-level averages are paired within models. Tokens and timing repeats are not independent model samples; no p-values are computed.",
+    "overall": {
+      "paired_contexts": 30,
+      "model_seeds": 3,
+      "prospective_fidelity_wins": 0,
+      "prospective_fidelity_losses": 30,
+      "fidelity_ties": 0,
+      "mean_tv_prospective_minus_instant": 0.0022288792492130643,
+      "min_tv_prospective_minus_instant": 3.238277347522578e-06,
+      "max_tv_prospective_minus_instant": 0.005799994725933191,
+      "mean_instant_tv": 0.06847014893138234,
+      "mean_prospective_tv": 0.07069902818059541,
+      "mean_instant_expected_single_proposal_acceptance": 0.9315298510686176,
+      "mean_prospective_expected_single_proposal_acceptance": 0.9293009718194046,
+      "mean_expected_acceptance_prospective_minus_instant": -0.0022288792492130643
+    },
+    "by_regime": [
+      {
+        "regime": "abrupt",
+        "paired_contexts": 15,
+        "model_seeds": 3,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 15,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.003839304047506397,
+        "min_tv_prospective_minus_instant": 0.0022890506016902262,
+        "max_tv_prospective_minus_instant": 0.005799994725933191,
+        "mean_instant_tv": 0.07781026833939485,
+        "mean_prospective_tv": 0.08164957238690124,
+        "mean_instant_expected_single_proposal_acceptance": 0.9221897316606051,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9183504276130987,
+        "mean_expected_acceptance_prospective_minus_instant": -0.003839304047506397
+      },
+      {
+        "regime": "smooth",
+        "paired_contexts": 15,
+        "model_seeds": 3,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 15,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.0006184544509197318,
+        "min_tv_prospective_minus_instant": 3.238277347522578e-06,
+        "max_tv_prospective_minus_instant": 0.0012453556265087165,
+        "mean_instant_tv": 0.05913002952336985,
+        "mean_prospective_tv": 0.059748483974289585,
+        "mean_instant_expected_single_proposal_acceptance": 0.9408699704766301,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9402515160257104,
+        "mean_expected_acceptance_prospective_minus_instant": -0.0006184544509197318
+      }
+    ],
+    "by_model_and_regime": [
+      {
+        "regime": "abrupt",
+        "model_seed": 17,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.003734010613957106,
+        "min_tv_prospective_minus_instant": 0.0026513722711578314,
+        "max_tv_prospective_minus_instant": 0.004949667697671634,
+        "mean_instant_tv": 0.08060654074058922,
+        "mean_prospective_tv": 0.08434055135454632,
+        "mean_instant_expected_single_proposal_acceptance": 0.9193934592594107,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9156594486454537,
+        "mean_expected_acceptance_prospective_minus_instant": -0.003734010613957106
+      },
+      {
+        "regime": "abrupt",
+        "model_seed": 23,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.00434187325068035,
+        "min_tv_prospective_minus_instant": 0.0030299415257809686,
+        "max_tv_prospective_minus_instant": 0.005799994725933191,
+        "mean_instant_tv": 0.07534584151352418,
+        "mean_prospective_tv": 0.07968771476420453,
+        "mean_instant_expected_single_proposal_acceptance": 0.9246541584864758,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9203122852357954,
+        "mean_expected_acceptance_prospective_minus_instant": -0.00434187325068035
+      },
+      {
+        "regime": "abrupt",
+        "model_seed": 41,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.003442028277881734,
+        "min_tv_prospective_minus_instant": 0.0022890506016902262,
+        "max_tv_prospective_minus_instant": 0.004966487497799751,
+        "mean_instant_tv": 0.07747842276407113,
+        "mean_prospective_tv": 0.08092045104195286,
+        "mean_instant_expected_single_proposal_acceptance": 0.9225215772359289,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9190795489580471,
+        "mean_expected_acceptance_prospective_minus_instant": -0.003442028277881734
+      },
+      {
+        "regime": "smooth",
+        "model_seed": 17,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.00044545503098706587,
+        "min_tv_prospective_minus_instant": 3.238277347522578e-06,
+        "max_tv_prospective_minus_instant": 0.000920457267956247,
+        "mean_instant_tv": 0.05704596001034906,
+        "mean_prospective_tv": 0.057491415041336126,
+        "mean_instant_expected_single_proposal_acceptance": 0.942954039989651,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9425085849586639,
+        "mean_expected_acceptance_prospective_minus_instant": -0.00044545503098706587
+      },
+      {
+        "regime": "smooth",
+        "model_seed": 23,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.000611004232272655,
+        "min_tv_prospective_minus_instant": 8.92356195577454e-05,
+        "max_tv_prospective_minus_instant": 0.0010874956437637168,
+        "mean_instant_tv": 0.05764905804065664,
+        "mean_prospective_tv": 0.05826006227292929,
+        "mean_instant_expected_single_proposal_acceptance": 0.9423509419593433,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9417399377270708,
+        "mean_expected_acceptance_prospective_minus_instant": -0.000611004232272655
+      },
+      {
+        "regime": "smooth",
+        "model_seed": 41,
+        "paired_contexts": 5,
+        "model_seeds": 1,
+        "prospective_fidelity_wins": 0,
+        "prospective_fidelity_losses": 5,
+        "fidelity_ties": 0,
+        "mean_tv_prospective_minus_instant": 0.0007989040894994748,
+        "min_tv_prospective_minus_instant": 0.00042703798275828264,
+        "max_tv_prospective_minus_instant": 0.0012453556265087165,
+        "mean_instant_tv": 0.06269507051910385,
+        "mean_prospective_tv": 0.06349397460860333,
+        "mean_instant_expected_single_proposal_acceptance": 0.9373049294808962,
+        "mean_prospective_expected_single_proposal_acceptance": 0.9365060253913967,
+        "mean_expected_acceptance_prospective_minus_instant": -0.0007989040894994748
+      }
+    ],
+    "paired_contexts": [
+      {
+        "model_seed": 17,
+        "regime": "abrupt",
+        "sequence_seed": 80000,
+        "instant_tv": 0.0811900464688321,
+        "prospective_tv": 0.08451873877984017,
+        "tv_prospective_minus_instant": 0.0033286923110080746,
+        "instant_expected_single_proposal_acceptance": 0.9188099535311679,
+        "prospective_expected_single_proposal_acceptance": 0.9154812612201598,
+        "expected_acceptance_prospective_minus_instant": -0.0033286923110080746,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "abrupt",
+        "sequence_seed": 80001,
+        "instant_tv": 0.0848420396506741,
+        "prospective_tv": 0.08979170734834574,
+        "tv_prospective_minus_instant": 0.004949667697671634,
+        "instant_expected_single_proposal_acceptance": 0.9151579603493258,
+        "prospective_expected_single_proposal_acceptance": 0.9102082926516543,
+        "expected_acceptance_prospective_minus_instant": -0.004949667697671634,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "abrupt",
+        "sequence_seed": 80002,
+        "instant_tv": 0.07630779237029961,
+        "prospective_tv": 0.07951806481029453,
+        "tv_prospective_minus_instant": 0.0032102724399949156,
+        "instant_expected_single_proposal_acceptance": 0.9236922076297004,
+        "prospective_expected_single_proposal_acceptance": 0.9204819351897054,
+        "expected_acceptance_prospective_minus_instant": -0.0032102724399949156,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "abrupt",
+        "sequence_seed": 80003,
+        "instant_tv": 0.08008314072608638,
+        "prospective_tv": 0.08273451299724421,
+        "tv_prospective_minus_instant": 0.0026513722711578314,
+        "instant_expected_single_proposal_acceptance": 0.9199168592739136,
+        "prospective_expected_single_proposal_acceptance": 0.9172654870027558,
+        "expected_acceptance_prospective_minus_instant": -0.0026513722711578314,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "abrupt",
+        "sequence_seed": 80004,
+        "instant_tv": 0.08060968448705391,
+        "prospective_tv": 0.08513973283700699,
+        "tv_prospective_minus_instant": 0.004530048349953075,
+        "instant_expected_single_proposal_acceptance": 0.9193903155129461,
+        "prospective_expected_single_proposal_acceptance": 0.9148602671629931,
+        "expected_acceptance_prospective_minus_instant": -0.004530048349953075,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "smooth",
+        "sequence_seed": 80000,
+        "instant_tv": 0.056389145341711605,
+        "prospective_tv": 0.05639238361905913,
+        "tv_prospective_minus_instant": 3.238277347522578e-06,
+        "instant_expected_single_proposal_acceptance": 0.9436108546582884,
+        "prospective_expected_single_proposal_acceptance": 0.9436076163809408,
+        "expected_acceptance_prospective_minus_instant": -3.238277347522578e-06,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "smooth",
+        "sequence_seed": 80001,
+        "instant_tv": 0.05472137823629489,
+        "prospective_tv": 0.055641835504251135,
+        "tv_prospective_minus_instant": 0.000920457267956247,
+        "instant_expected_single_proposal_acceptance": 0.9452786217637051,
+        "prospective_expected_single_proposal_acceptance": 0.9443581644957488,
+        "expected_acceptance_prospective_minus_instant": -0.000920457267956247,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "smooth",
+        "sequence_seed": 80002,
+        "instant_tv": 0.05875253906533086,
+        "prospective_tv": 0.05935580964971372,
+        "tv_prospective_minus_instant": 0.0006032705843828645,
+        "instant_expected_single_proposal_acceptance": 0.9412474609346692,
+        "prospective_expected_single_proposal_acceptance": 0.9406441903502862,
+        "expected_acceptance_prospective_minus_instant": -0.0006032705843828645,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "smooth",
+        "sequence_seed": 80003,
+        "instant_tv": 0.05815763218666413,
+        "prospective_tv": 0.05847336578054515,
+        "tv_prospective_minus_instant": 0.00031573359388101935,
+        "instant_expected_single_proposal_acceptance": 0.9418423678133359,
+        "prospective_expected_single_proposal_acceptance": 0.9415266342194548,
+        "expected_acceptance_prospective_minus_instant": -0.00031573359388101935,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 17,
+        "regime": "smooth",
+        "sequence_seed": 80004,
+        "instant_tv": 0.05720910522174383,
+        "prospective_tv": 0.057593680653111504,
+        "tv_prospective_minus_instant": 0.0003845754313676758,
+        "instant_expected_single_proposal_acceptance": 0.9427908947782562,
+        "prospective_expected_single_proposal_acceptance": 0.9424063193468885,
+        "expected_acceptance_prospective_minus_instant": -0.0003845754313676758,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "abrupt",
+        "sequence_seed": 80000,
+        "instant_tv": 0.0721719804847459,
+        "prospective_tv": 0.0779719752106791,
+        "tv_prospective_minus_instant": 0.005799994725933191,
+        "instant_expected_single_proposal_acceptance": 0.9278280195152541,
+        "prospective_expected_single_proposal_acceptance": 0.9220280247893209,
+        "expected_acceptance_prospective_minus_instant": -0.005799994725933191,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "abrupt",
+        "sequence_seed": 80001,
+        "instant_tv": 0.0783627230627461,
+        "prospective_tv": 0.08290542192310774,
+        "tv_prospective_minus_instant": 0.004542698860361641,
+        "instant_expected_single_proposal_acceptance": 0.921637276937254,
+        "prospective_expected_single_proposal_acceptance": 0.9170945780768922,
+        "expected_acceptance_prospective_minus_instant": -0.004542698860361641,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "abrupt",
+        "sequence_seed": 80002,
+        "instant_tv": 0.0737249370965135,
+        "prospective_tv": 0.07822416954272027,
+        "tv_prospective_minus_instant": 0.004499232446206772,
+        "instant_expected_single_proposal_acceptance": 0.9262750629034865,
+        "prospective_expected_single_proposal_acceptance": 0.9217758304572797,
+        "expected_acceptance_prospective_minus_instant": -0.004499232446206772,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "abrupt",
+        "sequence_seed": 80003,
+        "instant_tv": 0.07480137773341082,
+        "prospective_tv": 0.07783131925919179,
+        "tv_prospective_minus_instant": 0.0030299415257809686,
+        "instant_expected_single_proposal_acceptance": 0.9251986222665892,
+        "prospective_expected_single_proposal_acceptance": 0.9221686807408083,
+        "expected_acceptance_prospective_minus_instant": -0.0030299415257809686,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "abrupt",
+        "sequence_seed": 80004,
+        "instant_tv": 0.07766818919020455,
+        "prospective_tv": 0.08150568788532372,
+        "tv_prospective_minus_instant": 0.003837498695119179,
+        "instant_expected_single_proposal_acceptance": 0.9223318108097954,
+        "prospective_expected_single_proposal_acceptance": 0.9184943121146762,
+        "expected_acceptance_prospective_minus_instant": -0.003837498695119179,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "smooth",
+        "sequence_seed": 80000,
+        "instant_tv": 0.05785839227312342,
+        "prospective_tv": 0.05794762789268117,
+        "tv_prospective_minus_instant": 8.92356195577454e-05,
+        "instant_expected_single_proposal_acceptance": 0.9421416077268766,
+        "prospective_expected_single_proposal_acceptance": 0.9420523721073188,
+        "expected_acceptance_prospective_minus_instant": -8.92356195577454e-05,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "smooth",
+        "sequence_seed": 80001,
+        "instant_tv": 0.05815077787752722,
+        "prospective_tv": 0.059238273521290935,
+        "tv_prospective_minus_instant": 0.0010874956437637168,
+        "instant_expected_single_proposal_acceptance": 0.9418492221224728,
+        "prospective_expected_single_proposal_acceptance": 0.940761726478709,
+        "expected_acceptance_prospective_minus_instant": -0.0010874956437637168,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "smooth",
+        "sequence_seed": 80002,
+        "instant_tv": 0.05538862427864011,
+        "prospective_tv": 0.05612898990216933,
+        "tv_prospective_minus_instant": 0.0007403656235292211,
+        "instant_expected_single_proposal_acceptance": 0.9446113757213599,
+        "prospective_expected_single_proposal_acceptance": 0.9438710100978307,
+        "expected_acceptance_prospective_minus_instant": -0.0007403656235292211,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "smooth",
+        "sequence_seed": 80003,
+        "instant_tv": 0.05900806981131047,
+        "prospective_tv": 0.05933497228578345,
+        "tv_prospective_minus_instant": 0.0003269024744729787,
+        "instant_expected_single_proposal_acceptance": 0.9409919301886895,
+        "prospective_expected_single_proposal_acceptance": 0.9406650277142166,
+        "expected_acceptance_prospective_minus_instant": -0.0003269024744729787,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 23,
+        "regime": "smooth",
+        "sequence_seed": 80004,
+        "instant_tv": 0.05783942596268197,
+        "prospective_tv": 0.05865044776272158,
+        "tv_prospective_minus_instant": 0.000811021800039613,
+        "instant_expected_single_proposal_acceptance": 0.942160574037318,
+        "prospective_expected_single_proposal_acceptance": 0.9413495522372785,
+        "expected_acceptance_prospective_minus_instant": -0.000811021800039613,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "abrupt",
+        "sequence_seed": 80000,
+        "instant_tv": 0.07701522712198045,
+        "prospective_tv": 0.0819817146197802,
+        "tv_prospective_minus_instant": 0.004966487497799751,
+        "instant_expected_single_proposal_acceptance": 0.9229847728780196,
+        "prospective_expected_single_proposal_acceptance": 0.9180182853802198,
+        "expected_acceptance_prospective_minus_instant": -0.004966487497799751,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "abrupt",
+        "sequence_seed": 80001,
+        "instant_tv": 0.07797452623557288,
+        "prospective_tv": 0.0819139237681002,
+        "tv_prospective_minus_instant": 0.003939397532527311,
+        "instant_expected_single_proposal_acceptance": 0.9220254737644271,
+        "prospective_expected_single_proposal_acceptance": 0.9180860762318999,
+        "expected_acceptance_prospective_minus_instant": -0.003939397532527311,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "abrupt",
+        "sequence_seed": 80002,
+        "instant_tv": 0.08021447184944544,
+        "prospective_tv": 0.08324769317653538,
+        "tv_prospective_minus_instant": 0.003033221327089941,
+        "instant_expected_single_proposal_acceptance": 0.9197855281505546,
+        "prospective_expected_single_proposal_acceptance": 0.9167523068234646,
+        "expected_acceptance_prospective_minus_instant": -0.003033221327089941,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "abrupt",
+        "sequence_seed": 80003,
+        "instant_tv": 0.07761049931423854,
+        "prospective_tv": 0.08059248374453998,
+        "tv_prospective_minus_instant": 0.0029819844303014403,
+        "instant_expected_single_proposal_acceptance": 0.9223895006857614,
+        "prospective_expected_single_proposal_acceptance": 0.91940751625546,
+        "expected_acceptance_prospective_minus_instant": -0.0029819844303014403,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "abrupt",
+        "sequence_seed": 80004,
+        "instant_tv": 0.07457738929911836,
+        "prospective_tv": 0.07686643990080859,
+        "tv_prospective_minus_instant": 0.0022890506016902262,
+        "instant_expected_single_proposal_acceptance": 0.9254226107008816,
+        "prospective_expected_single_proposal_acceptance": 0.9231335600991915,
+        "expected_acceptance_prospective_minus_instant": -0.0022890506016902262,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "smooth",
+        "sequence_seed": 80000,
+        "instant_tv": 0.06648251063230005,
+        "prospective_tv": 0.066975317364275,
+        "tv_prospective_minus_instant": 0.0004928067319749513,
+        "instant_expected_single_proposal_acceptance": 0.9335174893677,
+        "prospective_expected_single_proposal_acceptance": 0.933024682635725,
+        "expected_acceptance_prospective_minus_instant": -0.0004928067319749513,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "smooth",
+        "sequence_seed": 80001,
+        "instant_tv": 0.0585847861757131,
+        "prospective_tv": 0.05924400640127086,
+        "tv_prospective_minus_instant": 0.000659220225557762,
+        "instant_expected_single_proposal_acceptance": 0.941415213824287,
+        "prospective_expected_single_proposal_acceptance": 0.9407559935987292,
+        "expected_acceptance_prospective_minus_instant": -0.000659220225557762,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "smooth",
+        "sequence_seed": 80002,
+        "instant_tv": 0.06277086497399642,
+        "prospective_tv": 0.0631979029567547,
+        "tv_prospective_minus_instant": 0.00042703798275828264,
+        "instant_expected_single_proposal_acceptance": 0.9372291350260036,
+        "prospective_expected_single_proposal_acceptance": 0.9368020970432454,
+        "expected_acceptance_prospective_minus_instant": -0.00042703798275828264,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "smooth",
+        "sequence_seed": 80003,
+        "instant_tv": 0.05985532224695562,
+        "prospective_tv": 0.061100677873464335,
+        "tv_prospective_minus_instant": 0.0012453556265087165,
+        "instant_expected_single_proposal_acceptance": 0.9401446777530443,
+        "prospective_expected_single_proposal_acceptance": 0.9388993221265357,
+        "expected_acceptance_prospective_minus_instant": -0.0012453556265087165,
+        "outcome": "prospective_loss"
+      },
+      {
+        "model_seed": 41,
+        "regime": "smooth",
+        "sequence_seed": 80004,
+        "instant_tv": 0.06578186856655407,
+        "prospective_tv": 0.06695196844725174,
+        "tv_prospective_minus_instant": 0.0011700998806976615,
+        "instant_expected_single_proposal_acceptance": 0.9342181314334459,
+        "prospective_expected_single_proposal_acceptance": 0.9330480315527483,
+        "expected_acceptance_prospective_minus_instant": -0.0011700998806976615,
+        "outcome": "prospective_loss"
+      }
+    ]
+  },
+  "perfect_drafter_controls": {
+    "parameters": {
+      "tau": 2.0,
+      "tau_a": 0.2,
+      "dt": 1.0,
+      "tolerance": 1e-12
+    },
+    "results": [
+      {
+        "scenario": "smooth_sinusoid",
+        "steps": 512,
+        "target_definition": "p_t=softmax(f_t); the raw instantaneous draft is exactly the target.",
+        "guards": {
+          "passed": true,
+          "ideal_instant_max_abs_probability_difference": 0.0,
+          "instant_is_perfect": true,
+          "prospective_does_not_beat_perfect_instant": true
+        },
+        "methods": [
+          {
+            "method": "instant",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          },
+          {
+            "method": "leaky",
+            "mean_tv": 0.12213168014701789,
+            "max_tv": 0.3573347225675877,
+            "expected_single_proposal_acceptance": 0.8778683198529821
+          },
+          {
+            "method": "prospective",
+            "mean_tv": 0.010813992370028778,
+            "max_tv": 0.03568308555964764,
+            "expected_single_proposal_acceptance": 0.9891860076299712
+          },
+          {
+            "method": "ideal",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          }
+        ]
+      },
+      {
+        "scenario": "abrupt_alternating",
+        "steps": 512,
+        "target_definition": "p_t=softmax(f_t); the raw instantaneous draft is exactly the target.",
+        "guards": {
+          "passed": true,
+          "ideal_instant_max_abs_probability_difference": 0.0,
+          "instant_is_perfect": true,
+          "prospective_does_not_beat_perfect_instant": true
+        },
+        "methods": [
+          {
+            "method": "instant",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          },
+          {
+            "method": "leaky",
+            "mean_tv": 0.2552102793045641,
+            "max_tv": 0.6830517185436195,
+            "expected_single_proposal_acceptance": 0.7447897206954359
+          },
+          {
+            "method": "prospective",
+            "mean_tv": 0.0042740868349485225,
+            "max_tv": 0.006771440097319441,
+            "expected_single_proposal_acceptance": 0.9957259131650514
+          },
+          {
+            "method": "ideal",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          }
+        ]
+      },
+      {
+        "scenario": "constant",
+        "steps": 512,
+        "target_definition": "p_t=softmax(f_t); the raw instantaneous draft is exactly the target.",
+        "guards": {
+          "passed": true,
+          "ideal_instant_max_abs_probability_difference": 0.0,
+          "instant_is_perfect": true,
+          "prospective_does_not_beat_perfect_instant": true
+        },
+        "methods": [
+          {
+            "method": "instant",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          },
+          {
+            "method": "leaky",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          },
+          {
+            "method": "prospective",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          },
+          {
+            "method": "ideal",
+            "mean_tv": 0.0,
+            "max_tv": 0.0,
+            "expected_single_proposal_acceptance": 1.0
+          }
+        ]
+      }
+    ],
+    "interpretation": "Lag compensation can repair an introduced filter while degrading an already correct ordinary drafter. This counterexample disproves a universal improvement claim, not every possible prospective architecture."
+  }
+}

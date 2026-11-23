@@ -1,0 +1,189 @@
+{"platform": "macOS-26.5.1-arm64-arm-64bit-Mach-O", "processor": "arm", "device": "cpu", "numpy": "2.5.5", "args": {"device": "cpu", "seeds": [17, 23, 41], "sequences": 5, "tokens": 256, "k": 4, "width": 2048, "train_size": 8192, "steps": 1600, "tau": 2.0, "tau_a": 0.2, "output": "results"}, "gpu_probe": "Metal device unavailable to this execution session", "timing": "perf_counter end-to-end CPU timings; NumPy BLAS; no simulated GPU timings"}
+Training frozen-target/distilled-draft pair, seed=17
+{"validation_logit_mse": 0.04973458645855021, "initial_validation_logit_mse": 2.2488414146371465, "final_minibatch_mse": 0.04582206751850026, "teacher_parameters": 4276224, "draft_parameters": 2640, "teacher_logit_scale": 3.8922377716154437, "train_size": 8192, "training_steps": 1600, "training_method": "NumPy analytic-gradient Adam, centered-logit MSE", "training_wall_seconds": 0.352720207999937}
+Completed seed=17 regime=smooth sequence=1/5
+Completed seed=17 regime=smooth sequence=2/5
+Completed seed=17 regime=smooth sequence=3/5
+Completed seed=17 regime=smooth sequence=4/5
+Completed seed=17 regime=smooth sequence=5/5
+Completed seed=17 regime=abrupt sequence=1/5
+Completed seed=17 regime=abrupt sequence=2/5
+Completed seed=17 regime=abrupt sequence=3/5
+Completed seed=17 regime=abrupt sequence=4/5
+Completed seed=17 regime=abrupt sequence=5/5
+Training frozen-target/distilled-draft pair, seed=23
+{"validation_logit_mse": 0.04435574619207562, "initial_validation_logit_mse": 2.2445722755385193, "final_minibatch_mse": 0.04183885703982992, "teacher_parameters": 4276224, "draft_parameters": 2640, "teacher_logit_scale": 3.7207853924552188, "train_size": 8192, "training_steps": 1600, "training_method": "NumPy analytic-gradient Adam, centered-logit MSE", "training_wall_seconds": 0.355975916999796}
+Completed seed=23 regime=smooth sequence=1/5
+Completed seed=23 regime=smooth sequence=2/5
+Completed seed=23 regime=smooth sequence=3/5
+Completed seed=23 regime=smooth sequence=4/5
+Completed seed=23 regime=smooth sequence=5/5
+Completed seed=23 regime=abrupt sequence=1/5
+Completed seed=23 regime=abrupt sequence=2/5
+Completed seed=23 regime=abrupt sequence=3/5
+Completed seed=23 regime=abrupt sequence=4/5
+Completed seed=23 regime=abrupt sequence=5/5
+Training frozen-target/distilled-draft pair, seed=41
+{"validation_logit_mse": 0.048619362619613665, "initial_validation_logit_mse": 2.2278611434407476, "final_minibatch_mse": 0.044711332690078986, "teacher_parameters": 4276224, "draft_parameters": 2640, "teacher_logit_scale": 3.884253676920446, "train_size": 8192, "training_steps": 1600, "training_method": "NumPy analytic-gradient Adam, centered-logit MSE", "training_wall_seconds": 0.3378707500000928}
+Completed seed=41 regime=smooth sequence=1/5
+Completed seed=41 regime=smooth sequence=2/5
+Completed seed=41 regime=smooth sequence=3/5
+Completed seed=41 regime=smooth sequence=4/5
+Completed seed=41 regime=smooth sequence=5/5
+Completed seed=41 regime=abrupt sequence=1/5
+Completed seed=41 regime=abrupt sequence=2/5
+Completed seed=41 regime=abrupt sequence=3/5
+Completed seed=41 regime=abrupt sequence=4/5
+Completed seed=41 regime=abrupt sequence=5/5
+[
+  {
+    "speedup_vs_instant_median": 1.4648557256572894,
+    "regime": "smooth",
+    "method": "target_only",
+    "runs": 15,
+    "ms_per_token_median": 0.11116975781177985,
+    "ms_per_token_mean": 0.11170434036458232,
+    "ms_per_token_sd": 0.008809397862730746,
+    "paired_speedup_median": 1.0,
+    "tokens_per_verification": 1.0,
+    "accepted_fraction_all_proposals": 0.0,
+    "accepted_fraction_checked_proposals": 0.0,
+    "paired_prefix_tv": 0,
+    "paired_prefix_kl": 0
+  },
+  {
+    "speedup_vs_instant_median": 1.0,
+    "regime": "smooth",
+    "method": "instant",
+    "runs": 15,
+    "ms_per_token_median": 0.1634039726550185,
+    "ms_per_token_mean": 0.16494031015608832,
+    "ms_per_token_sd": 0.007281465012070833,
+    "paired_speedup_median": 0.6826610856514856,
+    "tokens_per_verification": 4.373576309794989,
+    "accepted_fraction_all_proposals": 0.8521288837744534,
+    "accepted_fraction_checked_proposals": 0.9388272583201268,
+    "paired_prefix_tv": 0.05913002952336985,
+    "paired_prefix_kl": 0.011692549048813686
+  },
+  {
+    "speedup_vs_instant_median": 0.8952015380290574,
+    "regime": "smooth",
+    "method": "leaky",
+    "runs": 15,
+    "ms_per_token_median": 0.1857122421888846,
+    "ms_per_token_mean": 0.18372951406261015,
+    "ms_per_token_sd": 0.010235135654134534,
+    "paired_speedup_median": 0.6157277106224576,
+    "tokens_per_verification": 4.050632911392405,
+    "accepted_fraction_all_proposals": 0.7697631088634549,
+    "accepted_fraction_checked_proposals": 0.8970223325062034,
+    "paired_prefix_tv": 0.10258703357038831,
+    "paired_prefix_kl": 0.033875763897158864
+  },
+  {
+    "speedup_vs_instant_median": 0.9677162346157883,
+    "regime": "smooth",
+    "method": "prospective",
+    "runs": 15,
+    "ms_per_token_median": 0.16579069140654212,
+    "ms_per_token_mean": 0.1725237414062756,
+    "ms_per_token_sd": 0.01458998937508008,
+    "paired_speedup_median": 0.6699640846552521,
+    "tokens_per_verification": 4.4393063583815024,
+    "accepted_fraction_all_proposals": 0.8681062153487015,
+    "accepted_fraction_checked_proposals": 0.947452229299363,
+    "paired_prefix_tv": 0.059748483974289585,
+    "paired_prefix_kl": 0.011900906734267828
+  },
+  {
+    "speedup_vs_instant_median": 0.9741070704669844,
+    "regime": "smooth",
+    "method": "ideal",
+    "runs": 15,
+    "ms_per_token_median": 0.16894270703105008,
+    "ms_per_token_mean": 0.17134340234363776,
+    "ms_per_token_sd": 0.008194744311982412,
+    "paired_speedup_median": 0.6576450449333833,
+    "tokens_per_verification": 4.373576309794989,
+    "accepted_fraction_all_proposals": 0.8521288837744534,
+    "accepted_fraction_checked_proposals": 0.9388272583201268,
+    "paired_prefix_tv": 0.05913002952336985,
+    "paired_prefix_kl": 0.011692549048813686
+  },
+  {
+    "speedup_vs_instant_median": 1.5373550072975832,
+    "regime": "abrupt",
+    "method": "target_only",
+    "runs": 15,
+    "ms_per_token_median": 0.10991617968691969,
+    "ms_per_token_mean": 0.11184157994795403,
+    "ms_per_token_sd": 0.005823831037888185,
+    "paired_speedup_median": 1.0,
+    "tokens_per_verification": 1.0,
+    "accepted_fraction_all_proposals": 0.0,
+    "accepted_fraction_checked_proposals": 0.0,
+    "paired_prefix_tv": 0,
+    "paired_prefix_kl": 0
+  },
+  {
+    "speedup_vs_instant_median": 1.0,
+    "regime": "abrupt",
+    "method": "instant",
+    "runs": 15,
+    "ms_per_token_median": 0.165736328124666,
+    "ms_per_token_mean": 0.1700853622397839,
+    "ms_per_token_sd": 0.01131855271696476,
+    "paired_speedup_median": 0.6504678459127247,
+    "tokens_per_verification": 4.2151481888035125,
+    "accepted_fraction_all_proposals": 0.8093395965736391,
+    "accepted_fraction_checked_proposals": 0.9181818181818182,
+    "paired_prefix_tv": 0.07781026833939485,
+    "paired_prefix_kl": 0.020804187736968665
+  },
+  {
+    "speedup_vs_instant_median": 0.6680798033423437,
+    "regime": "abrupt",
+    "method": "leaky",
+    "runs": 15,
+    "ms_per_token_median": 0.2555278320315324,
+    "ms_per_token_mean": 0.2606693906251678,
+    "ms_per_token_sd": 0.018565057360730174,
+    "paired_speedup_median": 0.43486760099433036,
+    "tokens_per_verification": 2.800875273522976,
+    "accepted_fraction_all_proposals": 0.45452871870397643,
+    "accepted_fraction_checked_proposals": 0.7100949094046591,
+    "paired_prefix_tv": 0.28067016106954007,
+    "paired_prefix_kl": 0.2688027796005301
+  },
+  {
+    "speedup_vs_instant_median": 0.9602186343309798,
+    "regime": "abrupt",
+    "method": "prospective",
+    "runs": 15,
+    "ms_per_token_median": 0.17506298828173783,
+    "ms_per_token_mean": 0.17686822916675263,
+    "ms_per_token_sd": 0.007140549230191392,
+    "paired_speedup_median": 0.6294700948727159,
+    "tokens_per_verification": 4.224422442244224,
+    "accepted_fraction_all_proposals": 0.8125866370945384,
+    "accepted_fraction_checked_proposals": 0.9208294062205467,
+    "paired_prefix_tv": 0.08164957238690124,
+    "paired_prefix_kl": 0.023138801970692936
+  },
+  {
+    "speedup_vs_instant_median": 0.956507759793644,
+    "regime": "abrupt",
+    "method": "ideal",
+    "runs": 15,
+    "ms_per_token_median": 0.1753580703134361,
+    "ms_per_token_mean": 0.1762897890621673,
+    "ms_per_token_sd": 0.00942688515873035,
+    "paired_speedup_median": 0.6320850060444012,
+    "tokens_per_verification": 4.2151481888035125,
+    "accepted_fraction_all_proposals": 0.8093395965736391,
+    "accepted_fraction_checked_proposals": 0.9181818181818182,
+    "paired_prefix_tv": 0.07781026833939485,
+    "paired_prefix_kl": 0.020804187736968665
+  }
+]
